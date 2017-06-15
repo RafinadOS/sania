@@ -67,6 +67,8 @@ header {
 	overflow: hidden;
 	white-space: nowrap;
 	text-align: center;
+	border-bottom: 2px solid rgba(255,255,255,.3);
+	height: 60px;
 	&__item {
 		display: inline-block;
 		overflow: hidden;
@@ -84,8 +86,95 @@ header {
 	}
 }
 
+.info {
+	clear: both;
+	float: right;
+	overflow: hidden;
+	color: #fff;
+	text-align: right;
+	letter-spacing: 1px;
+	padding: 20px;
+	margin: 20px 0;
+	&__days {
+		font-weight: bold;
+		font-size: 16px;
+		position: relative;
+		padding: 0 0 0 20px;
+		&:before {
+			content: '';
+			display: inline-block;
+			margin: 0 5px 0 0;
+			width: 13px;
+			height: 13px;
+			background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2214px%22%20height%3D%2214px%22%3E%0D%0A%3Cpath%20fill-rule%3D%22evenodd%22%20%20fill%3D%22%23fff%22%0D%0A%20d%3D%22M7.000%2C13.999%20C3.150%2C13.999%20-0.000%2C10.849%20-0.000%2C6.999%20C-0.000%2C3.149%203.150%2C-0.000%207.000%2C-0.000%20C10.850%2C-0.000%2014.000%2C3.149%2014.000%2C6.999%20C14.000%2C10.849%2010.850%2C13.999%207.000%2C13.999%20ZM7.000%2C1.399%20C3.920%2C1.399%201.400%2C3.920%201.400%2C6.999%20C1.400%2C10.080%203.920%2C12.599%207.000%2C12.599%20C10.080%2C12.599%2012.600%2C10.080%2012.600%2C6.999%20C12.600%2C3.920%2010.080%2C1.399%207.000%2C1.399%20ZM6.300%2C7.700%20L6.300%2C3.499%20L7.350%2C3.499%20L7.350%2C7.140%20L10.500%2C9.030%20L9.940%2C9.940%20L6.300%2C7.700%20Z%22/%3E%0D%0A%3C/svg%3E') center center no-repeat;
+			background-size: cover;
+		}
+	}
+	&__phone {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 900;
+		font-size: 36px;
+	}
+}
+
+.wrapper-main {
+	& .info {
+		margin: 60px 0;
+	}
+}
+
+.title {
+	clear: both;
+	display: block;
+	width: 850px;
+	margin: auto;
+	color: #fff;
+	letter-spacing: 1px;
+	text-align: center;
+	font-weight: 900;
+	&-big {
+		font-weight: 900;
+		display: block;
+		font-size: 60px;
+		text-transform: uppercase;
+	}
+	&-small {
+		font-weight: bold;
+		display: block;
+		font-size: 36px;
+	}
+}
 
 
 
 
+// buttons //
+
+.button {
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	background: #fff;
+	color: #333;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 0 39px;
+	.radius(3px);
+	cursor: pointer;
+	font-weight: bold;
+	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+	.transition(.1s);
+	&-callback {
+		background: #ffca00;
+		&:hover {
+			background: #e7b908;
+		}
+		&:active {
+			line-height: 50px;
+			.transition(0s);
+		}
+	}
+}
 @import "_media.less";
