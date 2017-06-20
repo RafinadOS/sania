@@ -1,18 +1,19 @@
-window.onload = function(){
-	
-	var showTab = function()
-	{
-		console.log('ro');
+var tabs;
+
+var tabs = {
+	getTabs: function() {
+		this.tabs = document.querySelectorAll('.adress-tabs__item');
+		this.setEvent(this.tabs);
+	},
+	addClass: function() {
+		console.log(this);
+	},
+	setEvent: function(tabs) {
+		for(var i = 0; i < tabs.length; i++)
+		{
+			tabs[i].addEventListener('click', this.addClass, false)
+		}
 	}
-
-	var tabs = document.querySelectorAll('.adress-tabs__item');
-
-	for(var i =0; tabs.length < 0; i++)
-	{
-		tabs[i].addEventListener('click', showTab, false);
-		console.log(tabs[i]);
-	}
-
-	console.log(tabs);
+};
 	
-}
+tabs.getTabs();
