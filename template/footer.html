@@ -1,11 +1,38 @@
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.maskedinput.min.js"></script>
+	<script src="./js/owl.carousel.js"></script>
 	<script src="./js/main.js"></script>
 	<script>
-		jQuery(function($){
+
+		$(document).ready(function($) {
+
 			$("#phone").mask("+7 (999) 999-9999");
+			
+
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:10,
+			    responsiveClass:true,
+			    responsive:{
+			        0:{
+			            items:1,
+			            nav:true
+			        },
+			        600:{
+			            items:3,
+			            nav:false
+			        },
+			        1000:{
+			            items:5,
+			            nav:true,
+			            loop:false
+			        }
+			    }
+			})
 		});
+
+
 	</script>
 </body>
 </html>
