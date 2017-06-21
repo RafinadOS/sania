@@ -1,19 +1,34 @@
-var tabs;
+function toggleTab()
+{
+	var tabs = document.querySelectorAll('.adress-tabs__item');
+	var contains = document.querySelectorAll('.adress-tabs__wrapper');
 
-var tabs = {
-	getTabs: function() {
-		this.tabs = document.querySelectorAll('.adress-tabs__item');
-		this.setEvent(this.tabs);
-	},
-	addClass: function() {
-		console.log(this);
-	},
-	setEvent: function(tabs) {
-		for(var i = 0; i < tabs.length; i++)
+	var addClass = function()
+	{
+		if(this.classList.contains('adress-tabs__item-active'))
 		{
-			tabs[i].addEventListener('click', this.addClass, false)
+			return
+		}
+		else
+		{
+			for(var i = 0; i < tabs.length; i++) 
+			{
+				tabs[i].classList.remove('adress-tabs__item-active')
+			}
+			this.classList.add('adress-tabs__item-active');
+
+			for(var i = 0; i < contains.length; i++) 
+			{
+				contains[i].classList.remove('adress-tabs__wrapper-active')
+			}
+			document.getElementById(this.getAttribute('for')).classList.add('adress-tabs__wrapper-active');
 		}
 	}
-};
-	
-tabs.getTabs();
+
+	for(var i = 0; i < tabs.length; i++) 
+	{
+		tabs[i].addEventListener('click', addClass, false)
+	}
+}
+
+toggleTab();
