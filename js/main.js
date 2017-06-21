@@ -2,6 +2,7 @@ function toggleTab()
 {
 	var tabs = document.querySelectorAll('.adress-tabs__item');
 	var contains = document.querySelectorAll('.adress-tabs__wrapper');
+	var maps = document.querySelectorAll('.map__item');
 
 	var addClass = function()
 	{
@@ -21,7 +22,13 @@ function toggleTab()
 			{
 				contains[i].classList.remove('adress-tabs__wrapper-active')
 			}
-			document.getElementById(this.getAttribute('for')).classList.add('adress-tabs__wrapper-active');
+			document.querySelector('[data-adress="' + this.getAttribute('for') + '"]').classList.add('adress-tabs__wrapper-active');
+
+			for(var i = 0; i < maps.length; i++) 
+			{
+				maps[i].classList.remove('map__item-active')
+			}
+			document.querySelector('[data-map="' + this.getAttribute('for') + '"]').classList.add('map__item-active');
 		}
 	}
 

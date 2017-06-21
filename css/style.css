@@ -565,6 +565,20 @@ header {
 .adress-tabs__wrapper-active {
   display: block;
 }
+.map {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+.map__item {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  display: none;
+}
+.map__item-active {
+  display: block;
+}
 .button {
   display: inline-block;
   height: 48px;
