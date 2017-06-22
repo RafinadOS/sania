@@ -495,13 +495,44 @@ header {
 }
 
 .park {
+	padding: 100px 0;
+	&__title {
+		font-size: 42px;
+		font-weight: 900;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 0 50px 0;
+		letter-spacing: 1px;
+	}
+	&__untitle {
+		font-size: 24px;
+		color: #000;
+		text-align: center;
+		margin: 0 0 70px 0;
+	}
 	.clear();
 	&__item {
-		float: left;
+		display: block;
 		overflow: hidden;
-		width: 200px;
-		height: 200px;
-		background: #000;
+	}
+	&__img {
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto 30px auto;
+		max-width: 320px;
+		height: auto;
+	}
+	&__avto {
+		font-size: 30px;
+		font-weight: bold;
+		color: #000;
+		text-align: center;
+	}
+	&__text {
+		font-size: 18px;
+		color: #646464;
+		text-align: center;
 	}
 }
 

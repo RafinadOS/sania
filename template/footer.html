@@ -1,7 +1,7 @@
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.maskedinput.min.js"></script>
-	<script src="./js/owl.carousel.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
 	<script src="./js/main.js"></script>
 	<script>
 
@@ -11,22 +11,18 @@
 			
 
 			$('.owl-carousel').owlCarousel({
-			    loop:true,
-			    margin:10,
-			    responsiveClass:true,
+			    loop: false,
+			    margin: 10,
+			    nav: true,
 			    responsive:{
 			        0:{
-			            items:1,
-			            nav:true
+			            items:1
 			        },
-			        600:{
-			            items:3,
-			            nav:false
+			        740:{
+			            items:2
 			        },
-			        1000:{
-			            items:5,
-			            nav:true,
-			            loop:false
+			        1100:{
+			            items:3
 			        }
 			    }
 			})
