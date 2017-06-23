@@ -38,4 +38,38 @@ function toggleTab()
 	}
 }
 
+function showpopup()
+{
+	var buttons = document.querySelectorAll('.button-callback');
+	document.querySelector('.popup__close').addEventListener('click', function()
+			{
+				document.body.classList.toggle('popup-show')
+			}, false)
+
+	for(var i = 0; i < buttons.length; i++)
+	{
+		buttons[i].addEventListener('click', function()
+			{
+				document.body.classList.toggle('popup-show')
+			}, false)
+	}
+}
+
+function setTypeInput()
+{
+	var inputs = document.querySelectorAll('.form-send__input-phone');
+
+	for(var i = 0; i < inputs.length; i++)
+	{
+		inputs[i].setAttribute('type', 'number');
+	}
+}
+
+showpopup();
 toggleTab();
+
+document.getElementById('toggle-menu').addEventListener('click', function()
+	{
+		document.body.classList.toggle('sidebar');
+	}, 
+false)

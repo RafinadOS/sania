@@ -1,3 +1,36 @@
+	<div class="wrapper footer">
+		<div class="footer__contacts" id="footer__contacts">
+			<p class="footer__title">Автошкола «САНИЯ»</p>
+			<table class="footer__table">
+				<tr>
+					<td><a href="tel:8 9062 377 733">8 9062 377 733</a></td>
+					<td>Головной офис</td>
+				</tr>
+				<tr>
+					<td><a href="tel:8 911 459 0089">8 911 459 0089</a></td>
+					<td>г. Калининград</td>
+				</tr>
+				<tr>
+					<td><a href="tel:8 911 488 2289">8 911 488 2289</a></td>
+					<td>Директор</td>
+				</tr>
+			</table>
+			<a href="mailto:avtosania39@yandex.ru" class="footer__mail">avtosania39@yandex.ru</a>
+		</div>
+	</div>
+
+	<div class="overlay"></div>
+	<div class="popup">
+		<div class="popup__close"></div>
+		<div class="form-block__form">
+			<form class="form-send" action="">
+				<input type="text" class="form-send__input form-send__input-user" placeholder="Введите ваше имя" required="">
+				<input type="text" class="form-send__input form-send__input-phone" id="phone-2" placeholder="Введите ваш телефон" required="">
+				<input type="submit" class="form-send__button" value="Отправить">
+				<div class="form-send__text">Ваши данные надежно защищены<br>и не будут переданы третьим лицам</div>
+			</form>
+		</div>
+	</div>
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.maskedinput.min.js"></script>
@@ -6,9 +39,6 @@
 	<script>
 
 		$(document).ready(function($) {
-
-			$("#phone").mask("+7 (999) 999-9999");
-			
 
 			$('.owl-carousel').owlCarousel({
 			    loop: false,
@@ -28,6 +58,17 @@
 			        }
 			    }
 			})
+
+			if(document.body.offsetWidth < 760)
+			{
+				setTypeInput();
+			}
+			else
+			{
+				$("#phone").mask("+7 (999) 999-9999");
+				$("#phone-1").mask("+7 (999) 999-9999");
+				$("#phone-2").mask("+7 (999) 999-9999");
+			}
 		});
 
 
